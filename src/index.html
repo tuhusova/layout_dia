@@ -133,24 +133,28 @@
         <div class="header__slider-wrapper">
           <div class="header__slider">
             <div class="header__slides">
-
-              <img src="./images/slider/stairsss.png"
+              <img
+                src="./images/slider/stairsss.png"
                 alt="Slide 1"
-                  class="header__slide-image header__slide-image1">
-              <img src="./images/slider/ears.png"
+                class="header__slide-image header__slide-image1"
+              />
+              <img
+                src="./images/slider/ears.png"
                 alt="Slide 2"
-                class="header__slide-image header__slide-image2">
-              <img src="./images/slider/laptop.png"
-              alt="Slide 3"
-                class="header__slide-image header__slide-image3">
-
-
+                class="header__slide-image header__slide-image2"
+              />
+              <img
+                src="./images/slider/laptop.png"
+                alt="Slide 3"
+                class="header__slide-image header__slide-image3"
+              />
             </div>
             <div class="slider__container">
-
               <div class="navigation">
-                <div class="prev"></div> <!-- Кнопка назад -->
-                <div class="next"></div> <!-- Кнопка вперед -->
+                <div class="prev"></div>
+                <!-- Кнопка назад -->
+                <div class="next"></div>
+                <!-- Кнопка вперед -->
               </div>
               <div class="slider__content">
                 <h5 class="slider__intro">Intro</h5>
@@ -738,7 +742,9 @@
       const slides = document.querySelector('.header__slides');
       const prevButton = document.querySelector('.prev');
       const nextButton = document.querySelector('.next');
-      const totalSlides = document.querySelectorAll('.header__slides img').length;
+      const totalSlides = document.querySelectorAll(
+        '.header__slides img',
+      ).length;
 
       let currentIndex = 0;
 

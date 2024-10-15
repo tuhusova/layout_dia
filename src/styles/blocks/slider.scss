@@ -57,17 +57,23 @@
     width: 200%;
   }
 
-  &1 {
-    left: 0;
-  }
+  // &1 {
+  //   left: 0;
+  // }
 
-  &2 {
-    left: -100%;
-  }
+  // &2 {
+  //   left: -100%;
+  // }
 
-  &3 {
-    left: -200%;
-  }
+  // &3 {
+  //   left: -200%;
+  // }
+}
+
+.header__slides img {
+  width: 100%; /* Делаем изображение на всю ширину */
+  height: auto; /* Пропорциональное изменение высоты */
+  flex-shrink: 0;
 }
 
 .slider__container {
@@ -89,7 +95,34 @@
   }
 }
 
-.slider__arrows {
+.prev {
+  // display: flex;
+  // height: 32px;
+  // width: 32px;
+  // border-radius: 50%;
+  background-image: url('../images/slider/arleft.png');
+}
+
+.next {
+  // display: flex;
+  // height: 32px;
+  // width: 32px;
+  // border-radius: 50%;
+  background-image: url('../images/slider/arright.png');
+}
+
+/* Кастомные кнопки с фоновыми изображениями */
+.navigation .prev, .navigation .next {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.navigation {
   height: 32px;
   justify-content: space-between;
   display: flex;
@@ -98,10 +131,10 @@
   margin-right: 24px;
 }
 
-.slider__arrows a {
-  pointer-events: all;
-  cursor: pointer;
-}
+// .slider__arrows a {
+//   pointer-events: all;
+//   cursor: pointer;
+// }
 
 .slider__intro {
   font-family: Poppins, sans-serif;

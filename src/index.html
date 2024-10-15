@@ -133,45 +133,24 @@
         <div class="header__slider-wrapper">
           <div class="header__slider">
             <div class="header__slides">
-              <div
-                class="header__slide"
-                id="slide1"
-              >
-                <img
-                  src="./images/slider/stairsss.png"
-                  alt="Slide 1"
-                  class="header__slide-image header__slide-image1"
-                />
-              </div>
-              <!-- <div class="header__slide" id="slide2">
-                <img src="./images/slider/ears.png" alt="Slide 2"
+
+              <img src="./images/slider/stairsss.png"
+                alt="Slide 1"
+                  class="header__slide-image header__slide-image1">
+              <img src="./images/slider/ears.png"
+                alt="Slide 2"
                 class="header__slide-image header__slide-image2">
-              </div>
-              <div class="header__slide" id="slide3">
-                <img src="./images/slider/laptop.png" alt="Slide 3"
+              <img src="./images/slider/laptop.png"
+              alt="Slide 3"
                 class="header__slide-image header__slide-image3">
-              </div> -->
+
+
             </div>
             <div class="slider__container">
-              <div class="slider__arrows">
-                <a
-                  href="#slide1"
-                  class="slider-arrow--left"
-                >
-                  <img
-                    src="./images/slider/arleft.png"
-                    alt="Prev"
-                  />
-                </a>
-                <a
-                  href="#slide2"
-                  class="slider-arrow--right"
-                >
-                  <img
-                    src="./images/slider/arright.png"
-                    alt="Next"
-                  />
-                </a>
+
+              <div class="navigation">
+                <div class="prev"></div> <!-- Кнопка назад -->
+                <div class="next"></div> <!-- Кнопка вперед -->
               </div>
               <div class="slider__content">
                 <h5 class="slider__intro">Intro</h5>
@@ -754,5 +733,31 @@
       </div>
     </footer>
     <script src="scripts/main.js"></script>
+    <script>
+      // Получаем все необходимые элементы
+      const slides = document.querySelector('.header__slides');
+      const prevButton = document.querySelector('.prev');
+      const nextButton = document.querySelector('.next');
+      const totalSlides = document.querySelectorAll('.header__slides img').length;
+
+      let currentIndex = 0;
+
+      // Функция для обновления позиции слайдов
+      function updateSlidePosition() {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+
+      // Событие для кнопки "вперед"
+      nextButton.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % totalSlides; // Переход на следующий слайд
+        updateSlidePosition();
+      });
+
+      // Событие для кнопки "назад"
+      prevButton.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides; // Переход на предыдущий слайд
+        updateSlidePosition();
+      });
+    </script>
   </body>
 </html>
